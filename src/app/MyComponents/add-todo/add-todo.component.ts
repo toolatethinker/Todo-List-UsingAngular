@@ -7,7 +7,7 @@ import { Todo } from 'src/app/Todo';
   styleUrls: ['./add-todo.component.css']
 })
 export class AddTodoComponent implements OnInit {
-  t:boolean = true;
+  
   title!:string;
   desc!:string;
 
@@ -18,13 +18,6 @@ export class AddTodoComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.title == null || this.title=="")
-    {
-      this.t=false;
-      return;
-      
-    }
-    this.t=true;
     console.log(this.title,this.desc)
     const todo = {
       sno: 8,
